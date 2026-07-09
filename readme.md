@@ -145,3 +145,7 @@ The `samples/` folder contains synthetic dumps in four different shapes (Workday
 Greenhouse-, and generic-CSV-style, plus a flattened-PDF text file) so you can
 develop and test the pipeline before your real data arrives. See
 `samples/README.md` for the map.
+
+## Roadmap
+What's shipped and what's planned (email cross-reference, a community-maintained
+company contact directory, and more) lives in [`ROADMAP.md`](ROADMAP.md).
