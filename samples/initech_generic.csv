@@ -1,0 +1,4 @@
+candidate_name,candidate_email,req_id,position,date_applied,last_stage,disposition,fit_rating,match_pct,skills_parsed,auto_screened
+Jordan Rivera,jordan.rivera.example@gmail.com,IN-3301,Software Engineer,2024-01-09,Screen,Rejected - Location,C,55,"python;sql;git",Yes
+Jordan Rivera,jordan.rivera.example@gmail.com,IN-3390,Senior Software Engineer,2024-02-27,Onsite,Rejected - Offer Declined by Other,A,84,"python;sql;aws;terraform",No
+Jordan Rivera,jordan.rivera.example@gmail.com,IN-3502,Engineering Manager,2024-05-14,Application Review,Auto-Rejected - Experience Threshold,D,38,"python;leadership",Yes

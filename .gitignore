@@ -1,0 +1,9 @@
+.DS_Store
+impetus/
+
+# Keep the folders tracked, but ignore any personal data placed inside them.
+# The README in each folder is the one exception so the signpost survives commits.
+input/*
+!input/README.md
+reports/*
+!reports/README.md

@@ -1,0 +1,51 @@
+{
+  "candidateId": "WD-CAND-8837201",
+  "applications": [
+    {
+      "requisitionId": "REQ-2024-1187",
+      "jobTitle": "Senior Backend Engineer",
+      "appliedOn": "2024-02-11T18:24:51Z",
+      "StageReached": "Recruiter Screen",
+      "DispositionReason": "Not Selected - Stronger Candidates in Pool",
+      "dispositionedOn": "2024-03-02T09:10:00Z",
+      "screeningTelemetry": {
+        "Fit_Tier": "B",
+        "matchScorePercent": 68,
+        "keywordHits": 14,
+        "keywordMisses": 3,
+        "autoAdvanced": false
+      }
+    },
+    {
+      "requisitionId": "REQ-2024-1450",
+      "jobTitle": "Staff Software Engineer",
+      "appliedOn": "2024-04-03T15:02:11Z",
+      "StageReached": "Application Review",
+      "DispositionReason": "Auto-Rejected - Minimum Qualifications Not Met",
+      "dispositionedOn": "2024-04-03T15:04:09Z",
+      "screeningTelemetry": {
+        "Fit_Tier": "D",
+        "matchScorePercent": 41,
+        "keywordHits": 6,
+        "keywordMisses": 11,
+        "autoAdvanced": false,
+        "note": "Dispositioned 118 seconds after submission - no human review indicated."
+      }
+    },
+    {
+      "requisitionId": "REQ-2024-1602",
+      "jobTitle": "Backend Engineer II",
+      "appliedOn": "2024-05-20T11:47:33Z",
+      "StageReached": "Hiring Manager Review",
+      "DispositionReason": "Candidate Withdrew",
+      "dispositionedOn": "2024-06-01T08:00:00Z",
+      "screeningTelemetry": {
+        "Fit_Tier": "A",
+        "matchScorePercent": 82,
+        "keywordHits": 19,
+        "keywordMisses": 1,
+        "autoAdvanced": true
+      }
+    }
+  ]
+}

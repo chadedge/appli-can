@@ -1,0 +1,56 @@
+{
+  "export_type": "candidate_data_access_request",
+  "generated_at": "2024-07-15",
+  "candidate": {
+    "id": 55921038,
+    "first_name": "Jordan",
+    "last_name": "Rivera",
+    "email_addresses": [
+      {"value": "jordan.rivera.example@gmail.com", "type": "personal"}
+    ],
+    "phone_numbers": [
+      {"value": "555-0142", "type": "mobile"}
+    ]
+  },
+  "applications": [
+    {
+      "application_id": 981223,
+      "job_name": "Platform Engineer",
+      "applied_at": "2024-03-18",
+      "current_stage": "Phone Interview",
+      "status": "rejected",
+      "rejection_reason": "Did not meet bar in technical screen",
+      "rejected_at": "2024-04-05",
+      "scorecards": [
+        {
+          "interviewer": "REDACTED",
+          "overall_recommendation": "no",
+          "attributes": [
+            {"name": "Technical Depth", "rating": "mixed"},
+            {"name": "Communication", "rating": "yes"}
+          ]
+        }
+      ],
+      "ai_match": {
+        "match_tier": "Silver",
+        "match_score": 0.63,
+        "parsed_keywords_matched": ["python", "distributed systems", "postgres"]
+      }
+    },
+    {
+      "application_id": 994571,
+      "job_name": "Senior Platform Engineer",
+      "applied_at": "2024-06-02",
+      "current_stage": "Application Review",
+      "status": "active",
+      "rejection_reason": null,
+      "rejected_at": null,
+      "scorecards": [],
+      "ai_match": {
+        "match_tier": "Gold",
+        "match_score": 0.79,
+        "parsed_keywords_matched": ["python", "kubernetes", "distributed systems", "sql"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+UMBRELLA CORPORATION
+Candidate Data Access Response
+Provided pursuant to CCPA Request #DSR-2024-40118
+Response Date: July 1, 2024
+
+Candidate: Jordan Rivera
+Email on File: jordan.rivera.example@gmail.com
+Phone: (555) 0142
+Resident State: CA
+
+--- APPLICATION RECORD ---
+Position Applied: Cloud Infrastructure Engineer
+Requisition: UMB-88213
+Date Received: 2024-03-30
+Furthest Stage: Recruiter Screen
+Final Disposition: Not Advanced
+Disposition Note: Candidate profile scored below threshold for automated advancement.
+System Fit Tier: C
+Automated Match Score: 59 / 100
+Parsed Competencies: Python, Bash, Linux, Networking
+Automation Screen Applied: Yes
+
+Position Applied: Site Reliability Engineer
+Requisition: UMB-90144
+Date Received: 2024-06-11
+Furthest Stage: Application Review
+Final Disposition: Rejected
+Disposition Note: Minimum years of experience not detected by resume parser.
+System Fit Tier: D
+Automated Match Score: 44 / 100
+Parsed Competencies: Python, Linux
+Automation Screen Applied: Yes
+
+--- NOTICE ---
+Certain data has been withheld under claims of proprietary business logic and
+trade secret protection, including the specific weighting model and scoring
+prompt used to generate the Automated Match Score above. A withholding log is
+available upon request.
