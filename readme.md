@@ -99,10 +99,13 @@ files in `samples/` to see the problem (`Fit_Tier` vs `match_tier` vs `fit_ratin
   3. scripts/normalize.py          →  map vendor fields onto the common schema
         │                              (writes reports/normalized.json)
         ▼
-  4. cross-reference emails (planned) → join ATS timestamps against your
-        │                                "thanks but no thanks" email history
-        ▼
-  5. funnel dashboard / report (planned) →  see the black box, per company
+  4. scripts/report.py             →  per-company funnel + automation flags
+                                       (writes reports/funnel_report.md)
+
+  (V2) cross-reference emails      →  join ATS timestamps against your
+                                       "thanks but no thanks" email history.
+                                       Deferred: exporting a mailbox is a lot of
+                                       manual friction for optional timeline data.
 ```
 
 Run it against your dumps (or the samples) like so:
@@ -111,11 +114,12 @@ python scripts/extract_compressed_files.py input          # unzip any archives
 python scripts/identify_json_schema.py input/acme/*.json  # peek at fields (★ = telemetry)
 python scripts/identify_pdf_schema.py  input/umbrella.txt # same, for PDF/flattened text
 python scripts/normalize.py --input input                 # -> reports/normalized.json
+python scripts/report.py                                  # -> reports/funnel_report.md
 ```
 
-> **Status:** steps 1–3 work today (see [`SCHEMA.md`](SCHEMA.md) for the normalized
-> structure they produce). Steps 4–5 are planned. The field guide below still helps
-> you eyeball anything the normalizer flags as unrecognized.
+> **Status:** steps 1–4 work today (see [`SCHEMA.md`](SCHEMA.md) for the normalized
+> structure they produce). Email cross-reference is a V2 idea. The field guide below
+> still helps you eyeball anything the normalizer flags as unrecognized.
 
 ### What to hunt for in the raw data
 Regardless of vendor, these are the high-value fields the guide and transcript
