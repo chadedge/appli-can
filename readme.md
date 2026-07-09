@@ -96,18 +96,26 @@ files in `samples/` to see the problem (`Fit_Tier` vs `match_tier` vs `fit_ratin
      identify_pdf_schema.py            (JSON/CSV vs. flattened-PDF text)
         │
         ▼
-  3. normalize  (planned)          →  map vendor fields onto the common schema
-        │
+  3. scripts/normalize.py          →  map vendor fields onto the common schema
+        │                              (writes reports/normalized.json)
         ▼
   4. cross-reference emails (planned) → join ATS timestamps against your
         │                                "thanks but no thanks" email history
         ▼
-  5. funnel dashboard / report     →  see the black box, per company
+  5. funnel dashboard / report (planned) →  see the black box, per company
 ```
 
-> **Status:** the `scripts/` files are currently stubs (docstrings only). Steps
-> 3–5 are planned. Until they land, you can still eyeball your dumps — the field
-> guide below tells you what to look for.
+Run it against your dumps (or the samples) like so:
+```bash
+python scripts/extract_compressed_files.py input          # unzip any archives
+python scripts/identify_json_schema.py input/acme/*.json  # peek at fields (★ = telemetry)
+python scripts/identify_pdf_schema.py  input/umbrella.txt # same, for PDF/flattened text
+python scripts/normalize.py --input input                 # -> reports/normalized.json
+```
+
+> **Status:** steps 1–3 work today (see [`SCHEMA.md`](SCHEMA.md) for the normalized
+> structure they produce). Steps 4–5 are planned. The field guide below still helps
+> you eyeball anything the normalizer flags as unrecognized.
 
 ### What to hunt for in the raw data
 Regardless of vendor, these are the high-value fields the guide and transcript

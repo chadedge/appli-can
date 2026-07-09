@@ -1,0 +1,78 @@
+# Appli-CAN! — canonical vocabularies & vendor→canonical alias tables
+#
+# This file is the SINGLE SOURCE OF TRUTH for how messy vendor strings get
+# normalized. Edit it to teach the normalizer a new vendor string — NO code
+# changes required. All matching is case-insensitive; keys here are lowercased.
+
+# --- Funnel stages -----------------------------------------------------------
+# Canonical stages, ordered. `order` powers "how far did I get" in the funnel
+# report. Order is a best-effort ladder; real vendor pipelines vary, so treat
+# it as approximate rather than gospel.
+stages:
+  - {value: submitted,             order: 0}
+  - {value: application_review,    order: 1}
+  - {value: recruiter_screen,      order: 2}
+  - {value: assessment,            order: 3}
+  - {value: hiring_manager_review, order: 4}
+  - {value: interview,             order: 5}
+  - {value: offer,                 order: 6}
+  - {value: hired,                 order: 7}
+
+# Lowercased vendor stage string -> canonical stage value above.
+stage_aliases:
+  "submitted":              submitted
+  "application received":   submitted
+  "application review":     application_review
+  "recruiter screen":       recruiter_screen
+  "screen":                 recruiter_screen
+  "phone screen":           recruiter_screen
+  "phone interview":        interview
+  "onsite":                 interview
+  "technical screen":       assessment
+  "assessment":             assessment
+  "hiring manager review":  hiring_manager_review
+  "offer":                  offer
+  "hired":                  hired
+
+# --- Outcomes ----------------------------------------------------------------
+# Canonical outcome vocabulary.
+outcomes:
+  - active
+  - auto_rejected
+  - rejected_after_review
+  - rejected_after_interview
+  - withdrew
+  - offer
+  - hired
+  - unknown
+
+# Ordered keyword rules applied to the raw disposition/status text. First rule
+# whose `any` keyword appears (case-insensitive substring) wins. The special
+# outcome `rejected` is refined afterward by stage: if the furthest stage is at
+# or past `interview`, it becomes rejected_after_interview, else
+# rejected_after_review.
+outcome_rules:
+  - {any: ["withdrew", "withdrawn"],                                              outcome: withdrew}
+  - {any: ["hired"],                                                              outcome: hired}
+  - {any: ["offer accepted", "offer extended"],                                   outcome: offer}
+  - {any: ["auto-reject", "auto reject", "minimum qual", "not met", "threshold",
+           "not detected", "below threshold"],                                   outcome: auto_rejected}
+  - {any: ["not selected", "not advanced", "stronger candidate", "location",
+           "declined", "rejected", "not a fit", "did not meet bar"],             outcome: rejected}
+
+# Raw status values that mean "still in progress" (no disposition yet).
+active_statuses: ["active", "in progress", "under review", "open"]
+
+# --- Fit tiers ---------------------------------------------------------------
+# Vendor tiers are incompatible (A/B/C/D vs Gold/Silver/Bronze vs numeric), so
+# we keep the raw value verbatim AND map it to a 0.0–1.0 `fit_quality` for
+# cross-vendor comparison. These numbers are OUR judgment call, not a vendor
+# claim — tune them here rather than in code.
+fit_tier_quality:
+  a:      0.90
+  b:      0.70
+  c:      0.45
+  d:      0.20
+  gold:   0.90
+  silver: 0.60
+  bronze: 0.30

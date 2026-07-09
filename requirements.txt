@@ -1,0 +1,5 @@
+pydantic>=2,<3
+PyYAML>=6
+
+# Optional: only needed to read real .pdf dumps (flattened .txt works without it).
+# pypdf>=4
