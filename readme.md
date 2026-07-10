@@ -10,7 +10,7 @@ How many nights have you sat around, reading Reddit threads or watching HR-exper
 How much time do you spend fretting about "what does this company / job board _know_ about me that they're not telling me?"
 
 ***Well, I have good news and bad news (and it likely differs depending on where you live).***
-1. If you live in California (USA - and all focus of this repository is for us poor folks here in the USA) there are protections in place (CCPA, GDPR, [another]) that will help you, fair job-seeker, to retrieve much of the information applicant tracking systems store.
+1. If you live in California (USA - and all focus of this repository is for us poor folks here in the USA) there are protections in place (CCPA, GDPR, NYC Law 144) that will help you, fair job-seeker, to retrieve much of the information applicant tracking systems store.
 2. While there _are_ laws protecting your rights to access to data, a large portion of the truly useful stuff (inference, internal notes) are _not_ subject to data and identity requests.
 
 ***What this means for you***

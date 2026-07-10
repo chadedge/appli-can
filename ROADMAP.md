@@ -78,6 +78,6 @@ everyone's one-off research into a shared asset.
 ---
 
 ## Later / unsorted
-- `CLAUDE.md` + tests around the mapping rules (the logic-dense part).
+- `CLAUDE.md` or other LLM system training + tests around the mapping rules (the logic-dense part).
 - Harden vendor adapters against real Workday/Greenhouse exports.
 - A "withholding log" tracker — record what each company refused and why.
